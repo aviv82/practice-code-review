@@ -16,3 +16,10 @@
  *
  * difference([1, 2, 1], [2, 3]); //  [1]
  */
+
+// filter and reduce!
+
+const stub = (array[], values[]) {
+    return newArray[];
+}
+
