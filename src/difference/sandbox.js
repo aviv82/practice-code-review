@@ -19,7 +19,27 @@
 
 // filter and reduce!
 
-const stub = (array[], values[]) {
-    return newArray[];
-}
+/* const stub = (array[], values[]) {
+    return newArray[]
+}; */
 
+/*
+strategy
+1. sort through first array with a function that compares the value to the values array
+2. use filter method 
+*/
+
+// hint!
+
+/* const firstTry = (array1, array2) => {
+    const filteredValues = array1.filter((item) => !array2.includes(item))
+
+
+}; */
+
+// const firstTry = (array, values) => {
+//   for (const value of array) {
+//     if (values.includes(value)) {
+//     }
+//   }
+// };
