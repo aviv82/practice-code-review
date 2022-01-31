@@ -1,4 +1,4 @@
-import { solutionName } from './solution-name.js';
+import { solutionName } from './solution-name.js.js';
 /* Difference
 Write a function that removes specific values from an array. The values to
 remove are provided as a second array argument.
@@ -113,4 +113,4 @@ const firstTry = (array, values) => {
   console.log(newArray);
   return newArray;
 };
-//end 
+
