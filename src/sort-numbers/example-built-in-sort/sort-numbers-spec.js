@@ -1,4 +1,5 @@
 import { sortNumbers } from './sort-numbers.js';
+/* eslint-disable */
 
 describe('sortNumbers sorts an array of numbers', () => {
   describe('sorts positive numbers', () => {
