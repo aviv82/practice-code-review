@@ -34,11 +34,7 @@ export const difference1 = (array = [], values = []) => {
   const set1 = new Set(array);
   const set2 = new Set(values);
   const set3 = new Set([...set1].filter((x) => !set2.has(x)));
-  // return Array.from(set3);         //works
-  // return [...set3];                // works
-  const newArray = [];
-  set3.forEach((v) => newArray.push(v));
-  return newArray; //works
+  return [...set3];
 };
 
 // 2nd Try: use Set and remove temp variable //works
@@ -49,9 +45,7 @@ export const difference2 = (array = [], values = []) => {
 // 3rd Try: inspired by coach Sander and aviv  //works
 // eslint-disable-next-line jsdoc/require-returns
 // eslint-disable-next-line jsdoc/require-param
-/**
- *  strategy: use for loop
- */
+// use for loop.
 export const difference3 = (array = [], values = []) => {
   const newArray = [];
   for (const ele of array) {
@@ -63,9 +57,7 @@ export const difference3 = (array = [], values = []) => {
 };
 
 // 4th Try: inspired by coach Sander //works
-/**
- * strategy: use filter
- */
+// use filter
 
 export const difference4 = (array = [], values = []) => {
   const newArray = array.filter((ele, i) => {
