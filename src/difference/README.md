@@ -1,4 +1,4 @@
-# challenge name: strategy name
+# difference: strategy name
 
 ---
 
