@@ -36,7 +36,7 @@ strategy
 }; */
 
 export const firstTry = (array, values) => {
-  let newArray = '';
+  let newArray = [];
   for (const value of array) {
     if (!values.includes(value)) {
       newArray.push(value);
