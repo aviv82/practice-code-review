@@ -39,7 +39,7 @@ export const firstTry = (array, values) => {
   let newArray = '';
   for (const value of array) {
     if (!values.includes(value)) {
-      newArray = newArray.push(value);
+      newArray.push(value);
     }
   }
   for (let i = 0; i < newArray.length; i++) {
