@@ -1,6 +1,7 @@
 # difference: strategy name
 
----
+- function that compares an array to another array and removes similar values
+  and also doubles from the original array
 
 ## Strategy
 
@@ -12,12 +13,16 @@
 
 ## Use Cases
 
----
+- this function can be used to compare lists and get rid of repeating items
+
+- sort through items on subscription lists or contact lists
+
+  ```js
+  const contactList = ['sanne', 'mervat', 'alina', 'maurice', 'tahmina'];
+  const referenceList = ['daniel', 'mervat', 'aviv', 'maurice', 'tahmina'];
+  const updatedList = difference(contactList, referenceList); // ['sanne','alina'];
+  ```
 
 ## Inspiration
 
-<!--
-  was there any code, blog post, video, ... that inspired your solution?
-  there's nothing wrong with adapting other people's code, just give them credit!
-  and say how it inspired your solution.
--->
+- coach sander

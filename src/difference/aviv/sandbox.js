@@ -1,5 +1,5 @@
 /**
- * Creates an array of values that are in the first array, but not not in the second array.
+ * Creates an array of values that are in the first array, but not in the second array.
  *
  * Repeated values are not duplicated in the return value, and the order of result values are determined by the first array.
  *
@@ -29,17 +29,24 @@ strategy
 2. use filter method 
 */
 
-// hint!
+// hint from coach sander!
 
 /* const firstTry = (array1, array2) => {
     const filteredValues = array1.filter((item) => !array2.includes(item))
-
-
 }; */
 
-// const firstTry = (array, values) => {
-//   for (const value of array) {
-//     if (values.includes(value)) {
-//     }
-//   }
-// };
+export const firstTry = (array, values) => {
+  let newArray = '';
+  for (const value of array) {
+    if (!values.includes(value)) {
+      newArray = newArray.push(value);
+    }
+  }
+  for (let i = 0; i < newArray.length; i++) {
+    if (newArray.includes(newArray[i])) {
+      newArray.slice(i);
+    }
+  }
+  console.log(newArray);
+  return newArray;
+};
