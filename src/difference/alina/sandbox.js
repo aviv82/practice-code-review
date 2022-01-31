@@ -29,7 +29,6 @@ remove are provided as a second array argument.
 2) get the set consisting of the elements that belong to the first array and that do not belong to the second array.
 3) convert the obtained set to a new array and return it.
 */
-// eslint-disable-next-line folders/match-regex
 export const difference1 = (array = [], values = []) => {
   const set1 = new Set(array);
   const set2 = new Set(values);
@@ -43,8 +42,6 @@ export const difference2 = (array = [], values = []) => {
 };
 
 // 3rd Try: inspired by coach Sander and aviv  //works
-// eslint-disable-next-line jsdoc/require-returns
-// eslint-disable-next-line jsdoc/require-param
 // use for loop.
 export const difference3 = (array = [], values = []) => {
   const newArray = [];
@@ -64,21 +61,6 @@ export const difference4 = (array = [], values = []) => {
     return !values.includes(ele) && array.indexOf(ele) === i;
   });
   return newArray;
-};
-
-// 5th Try: use forEach() // kind of works. But with problem that typeof element is sting .
-export const difference5 = (array = [], values = []) => {
-  const newArray = array.filter((ele) => !values.includes(ele));
-  const removeDup = (newArray) => {
-    const unique = {};
-    newArray.forEach((i) => {
-      if (!unique[i]) {
-        unique[i] = true;
-      }
-    });
-    return Object.keys(unique);
-  };
-  return removeDup(newArray);
 };
 
 // Inspiration 1: from coach Sander-> reduce + concat.

@@ -1,19 +1,11 @@
-// eslint-disable-next-line folders/match-regex
 import {
   difference1,
   difference2,
   difference3,
   difference4,
-  difference5
 } from './alina/sandbox.js';
 
-for (const solution of [
-  difference1,
-  // difference2,
-  // difference3,
-  // difference4,
-  // difference5
-]) {
+for (const solution of [difference1, difference2, difference3, difference4]) {
   describe('test difference of two arrays and without duplication', () => {
     describe('default parameters', () => {
       it('argument values is empty', () => {
