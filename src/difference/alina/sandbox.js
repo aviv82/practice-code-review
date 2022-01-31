@@ -1,4 +1,3 @@
-/* eslint-disable jsdoc/require-returns */
 /* Difference
 Write a function that removes specific values from an array. The values to
 remove are provided as a second array argument.
