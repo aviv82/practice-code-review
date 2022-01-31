@@ -13,7 +13,7 @@ describe('removes duplicate values from array', () => {
   describe('array is an array of strings', () => {
     it('should contain no duplicates', () => {
       expect(firstTry(['4', 'bob', 'false', 'null'], ['4', 'null'])).toEqual([
-        'bob,',
+        'bob',
         'false',
       ]);
     });
