@@ -97,7 +97,7 @@ const differenceFunction = (array1, array2) => {
   }, []);
 };
 
-//Inspiration 2: by aviv and study group
+//Inspiration 2: by aviv and study group.
 const firstTry = (array, values) => {
   const newArray = [];
   for (const value of array) {
