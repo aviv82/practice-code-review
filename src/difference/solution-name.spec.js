@@ -4,7 +4,7 @@ import {
   difference3,
   difference4,
   difference5
-} from '../difference/Alina/sandbox';
+} from './alina/sandbox';
 
 for (const solution of [
   difference1,
