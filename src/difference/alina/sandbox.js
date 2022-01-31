@@ -1,3 +1,4 @@
+/* eslint-disable jsdoc/require-returns */
 /* Difference
 Write a function that removes specific values from an array. The values to
 remove are provided as a second array argument.
@@ -28,6 +29,7 @@ remove are provided as a second array argument.
 2) get the set consisting of the elements that belong to the first array and that do not belong to the second array.
 3) convert the obtained set to a new array and return it.
 */
+// eslint-disable-next-line folders/match-regex
 export const difference1 = (array = [], values = []) => {
   const set1 = new Set(array);
   const set2 = new Set(values);
@@ -45,12 +47,10 @@ export const difference2 = (array = [], values = []) => {
 };
 
 // 3rd Try: inspired by coach Sander and aviv  //works
+// eslint-disable-next-line jsdoc/require-returns
+// eslint-disable-next-line jsdoc/require-param
 /**
- * strategy: use for loop
- * @param array
- * @param values
- * @param array
- * @param values
+ *  strategy: use for loop
  */
 export const difference3 = (array = [], values = []) => {
   const newArray = [];
@@ -62,7 +62,7 @@ export const difference3 = (array = [], values = []) => {
   return newArray;
 };
 
-//4th Try: inspired by coach Sander //works
+// 4th Try: inspired by coach Sander //works
 /**
  * strategy: use filter
  */
