@@ -22,7 +22,7 @@ describe('removes duplicate values from array', () => {
     it('should contain no duplicates', () => {
       expect(firstTry([4, 'bob', false, null], ['4', null])).toEqual([
         4,
-        'bob,',
+        'bob',
         false,
       ]);
     });
