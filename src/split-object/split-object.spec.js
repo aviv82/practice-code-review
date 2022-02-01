@@ -156,19 +156,19 @@ for (const solution of [
       });
     });
     describe('no Side-effect', () => {
-      it('the argument object shoud not modified.', () => {
+      it('the argument object should not modified.', () => {
         const toSeparate = { a: 2, b: 2, c: 6 };
         const expected = { a: 2, b: 2, c: 6 };
         solution(toSeparate);
         expect(toSeparate).toEqual(expected);
       });
-      it('the argument object shoud not modified.', () => {
+      it('the argument object should not modified.', () => {
         const toSeparate = { a: 1, b: 2, c: 6 };
         const expected = { a: 1, b: 2, c: 6 };
         solution(toSeparate);
         expect(toSeparate).toEqual(expected);
       });
-      it('the argument object shoud not modified.', () => {
+      it('the argument object should not modified.', () => {
         const toSeparate = { a: 2, b: 2, c: 10 };
         const expected = { a: 2, b: 2, c: 10 };
         solution(toSeparate);
