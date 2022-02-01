@@ -42,7 +42,13 @@ export const firstTry = (array, values) => {
       newArray.push(value);
     }
   }
-  return newArray;
+  const finalArray = [];
+  for (let i = 0; i < newArray.length; i++) {
+    if (!finalArray.includes(newArray[i])) {
+      finalArray.push(newArray[i]);
+    }
+  }
+  return finalArray;
 };
 
 // let chars = ['A', 'B', 'A', 'C', 'B'];  let uniqueChars = chars.filter((c, index) => {     return chars.indexOf(c) === index; });  console.log(uniqueChars);
