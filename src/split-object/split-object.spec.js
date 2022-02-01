@@ -38,7 +38,7 @@ for (const solution of [
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('Should return a array with one key/value pair.', () => {
+      it('return an array with one key/value pair.', () => {
         const toSeparate = { a: 2, b: 3, c: 3 };
         const expected = [{ a: 2 }, { b: 3 }, { c: 3 }];
         const actual = solution(toSeparate);
@@ -58,7 +58,7 @@ for (const solution of [
       });
     });
     describe('object values are string.', () => {
-      it('an array with one key/value pair.', () => {
+      it('array with one key/value pair.', () => {
         const toSeparate = { name: 'Joe', age: 20, weight: '50kg' };
         const expected = [{ name: 'Joe' }, { age: 20 }, { weight: '50kg' }];
         const actual = solution(toSeparate);
