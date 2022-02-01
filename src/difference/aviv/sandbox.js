@@ -35,19 +35,25 @@ strategy
     const filteredValues = array1.filter((item) => !array2.includes(item))
 }; */
 
-export const firstTry = (array, values) => {
+const secondTry = (array, values) => {
   const newArray = [];
   for (const value of array) {
     if (!values.includes(value)) {
       newArray.push(value);
     }
   }
-  for (let i = 0; i < newArray.length; i++) {
-    if (newArray.includes(newArray[i])) {
-      newArray.slice(i);
-      console.log(newArray);
-    }
-  }
-  console.log(newArray);
   return newArray;
+};
+
+// let chars = ['A', 'B', 'A', 'C', 'B'];  let uniqueChars = chars.filter((c, index) => {     return chars.indexOf(c) === index; });  console.log(uniqueChars);
+//  let chars = ['A', 'B', 'A', 'C', 'B'];  let uniqueChars = []; chars.forEach((c) => {     if (!uniqueChars.includes(c)) {         uniqueChars.push(c);     } });  console.log(uniqueChars);
+
+export const firstTry = (array = [], values = []) => {
+  const newArray = [];
+  array.forEach((c) => {
+    if (!values.includes(c)) {
+      newArray.push(c);
+    }
+    return newArray;
+  });
 };
