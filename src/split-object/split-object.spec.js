@@ -38,19 +38,19 @@ for (const solution of [
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { a: 2, b: 3, c: 3 };
         const expected = [{ a: 2 }, { b: 3 }, { c: 3 }];
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { a: 2, b: 2, c: 5 };
         const expected = [{ a: 2 }, { b: 2 }, { c: 5 }];
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { a: 2, b: 2, c: 6 };
         const expected = [{ a: 2 }, { b: 2 }, { c: 6 }];
         const actual = solution(toSeparate);
@@ -58,49 +58,49 @@ for (const solution of [
       });
     });
     describe('object values are string.', () => {
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { name: 'Joe', age: 20, weight: '50kg' };
         const expected = [{ name: 'Joe' }, { age: 20 }, { weight: '50kg' }];
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { name: 'J', age: 20, weight: '50kg' };
         const expected = [{ name: 'J' }, { age: 20 }, { weight: '50kg' }];
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { name: 'Joe', age: 2, weight: '50kg' };
         const expected = [{ name: 'Joe' }, { age: 2 }, { weight: '50kg' }];
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { name: 'Joe', age: 20, weight: '5kg' };
         const expected = [{ name: 'Joe' }, { age: 20 }, { weight: '5kg' }];
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { name: 'Joe', age: 20, weight: '60kg' };
         const expected = [{ name: 'Joe' }, { age: 20 }, { weight: '60kg' }];
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { name: 'Joe', age: 20, weight: '51kg' };
         const expected = [{ name: 'Joe' }, { age: 20 }, { weight: '51kg' }];
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { name: 'Joe', age: 20, weight: '52kg' };
         const expected = [{ name: 'Joe' }, { age: 20 }, { weight: '52kg' }];
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { name: 'Joe', age: 20, weight: '53kg' };
         const expected = [{ name: 'Joe' }, { age: 20 }, { weight: '53kg' }];
         const actual = solution(toSeparate);
@@ -108,7 +108,7 @@ for (const solution of [
       });
     });
     describe('object values are special values.', () => {
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { name: 'null', age: 0.2, weight: undefined };
         const expected = [
           { name: 'null' },
@@ -118,13 +118,13 @@ for (const solution of [
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { name: null, age: 0.2, weight: undefined };
         const expected = [{ name: null }, { age: 0.2 }, { weight: undefined }];
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { name: 'null', age: 0.2, weight: 'undefined' };
         const expected = [
           { name: 'null' },
@@ -134,7 +134,7 @@ for (const solution of [
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { name: 'null', age: Infinity, weight: undefined };
         const expected = [
           { name: 'null' },
@@ -144,7 +144,7 @@ for (const solution of [
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { name: 'null', age: -Infinity, weight: undefined };
         const expected = [
           { name: 'null' },
@@ -156,7 +156,7 @@ for (const solution of [
       });
     });
     describe('no Side-effect', () => {
-      it('should not modify the origin object.', () => {
+      it('Should not modify the origin object.', () => {
         const toSeparate = { a: 2, b: 2, c: 6 };
         const expected = { a: 2, b: 2, c: 6 };
         solution(toSeparate);
