@@ -45,6 +45,7 @@ export const firstTry = (array, values) => {
   for (let i = 0; i < newArray.length; i++) {
     if (newArray.includes(newArray[i])) {
       newArray.slice(i);
+      console.log(newArray);
     }
   }
   console.log(newArray);
