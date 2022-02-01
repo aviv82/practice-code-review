@@ -29,10 +29,10 @@ remove are provided as a second array argument.
 3) convert the obtained set to a new array and return it.
 */
 export const difference1 = (array = [], values = []) => {
-  const set1 = new Set(array);
-  const set2 = new Set(values);
-  const set3 = new Set([...set1].filter((x) => !set2.has(x)));
-  return [...set3];
+  const setArray = new Set(array);
+  const setValues = new Set(values);
+  const setNewArray = new Set([...setArray].filter((x) => !setValues.has(x)));
+  return [...setNewArray];
 };
 
 // 2nd Try: use Set and remove temp variable //works
