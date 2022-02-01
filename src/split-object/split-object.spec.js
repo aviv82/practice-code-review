@@ -26,7 +26,7 @@ for (const solution of [
       });
     });
     describe('object values are number.', () => {
-      it('Should return a array with one key/value pair.', () => {
+      it('should return a array with one key/value pair.', () => {
         const toSeparate = { a: 1, b: 2, c: 3 };
         const expected = [{ a: 1 }, { b: 2 }, { c: 3 }];
         const actual = solution(toSeparate);
