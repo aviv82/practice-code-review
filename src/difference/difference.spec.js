@@ -65,7 +65,5 @@ for (const solution of [difference1, difference2, difference3, difference4]) {
         expect(values).toEqual([2]);
       });
     });
-
-
   });
 }
