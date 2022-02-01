@@ -1,8 +1,8 @@
 /* eslint-disable */
 
-import { secondTry } from './aviv/sandbox.js';
+import { firstTry, secondTry } from './aviv/sandbox.js';
 
-for (const solution of [secondTry]) {
+for (const solution of [firstTry, secondTry]) {
   describe('removes duplicate values from array', () => {
     describe('array is an array of numbers', () => {
       it('should contain no duplicates', () => {
