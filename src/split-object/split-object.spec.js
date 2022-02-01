@@ -32,7 +32,7 @@ for (const solution of [
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { a: 2, b: 2, c: 3 };
         const expected = [{ a: 2 }, { b: 2 }, { c: 3 }];
         const actual = solution(toSeparate);
