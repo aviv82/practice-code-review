@@ -38,5 +38,12 @@ describe('removes duplicate values from array', () => {
         undefined,
       ]);
     });
+    describe('array has repeating values', () => {
+      it('should return array with no repeating values', () => {
+        expect(
+          firstTry([4, 'bob', false, null, 4, 'bob'], ['4', null]),
+        ).toEqual([4, 'bob', false]);
+      });
+    });
   });
 });
