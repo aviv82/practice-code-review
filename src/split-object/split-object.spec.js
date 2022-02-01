@@ -26,7 +26,7 @@ for (const solution of [
       });
     });
     describe('object values are number.', () => {
-      it('should return a array with one key/value pair.', () => {
+      it('Should return a array with one key/value pair.', () => {
         const toSeparate = { a: 1, b: 2, c: 3 };
         const expected = [{ a: 1 }, { b: 2 }, { c: 3 }];
         const actual = solution(toSeparate);
@@ -156,7 +156,7 @@ for (const solution of [
       });
     });
     describe('no Side-effect', () => {
-      it('the argument object should not modified.', () => {
+      it('should not modify the origin object.', () => {
         const toSeparate = { a: 2, b: 2, c: 6 };
         const expected = { a: 2, b: 2, c: 6 };
         solution(toSeparate);
