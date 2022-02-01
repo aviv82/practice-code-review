@@ -94,13 +94,13 @@ for (const solution of [
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('an array with one key/value pair.', () => {
+      it('unique key/value pair in an array.', () => {
         const toSeparate = { name: 'Joe', age: 20, weight: '52kg' };
         const expected = [{ name: 'Joe' }, { age: 20 }, { weight: '52kg' }];
         const actual = solution(toSeparate);
         expect(actual).toEqual(expected);
       });
-      it('an array with one key/value pair.', () => {
+      it('array with one key/value pair.', () => {
         const toSeparate = { name: 'Joe', age: 20, weight: '53kg' };
         const expected = [{ name: 'Joe' }, { age: 20 }, { weight: '53kg' }];
         const actual = solution(toSeparate);
