@@ -48,7 +48,6 @@ export const firstTry = (array, values) => {
       finalArray.push(i);
     }
   });
-  console.log(finalArray);
   return finalArray;
 };
 
