@@ -42,7 +42,14 @@ export const firstTry = (array, values) => {
       newArray.push(value);
     }
   }
-  return newArray;
+  const finalArray = [];
+  newArray.forEach((i) => {
+    if (!finalArray.includes(i)) {
+      finalArray.push(i);
+    }
+  });
+  console.log(finalArray);
+  return finalArray;
 };
 
 // let chars = ['A', 'B', 'A', 'C', 'B'];  let uniqueChars = chars.filter((c, index) => {     return chars.indexOf(c) === index; });  console.log(uniqueChars);
@@ -55,6 +62,5 @@ export const secondTry = (array = [], values = []) => {
       newArray.push(c);
     }
   });
-  console.log(newArray);
   return newArray;
 };

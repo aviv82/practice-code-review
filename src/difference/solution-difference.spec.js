@@ -3,7 +3,7 @@
 import { firstTry, secondTry } from './aviv/sandbox.js';
 
 for (const solution of [firstTry, secondTry]) {
-  let sloutions = describe('removes duplicate values from array', () => {
+  describe('removes duplicate values from array', () => {
     describe('array is an array of numbers', () => {
       it('should contain no duplicates', () => {
         const array = [11, 22, 3, 4];
@@ -39,13 +39,13 @@ for (const solution of [firstTry, secondTry]) {
           undefined,
         ]);
       });
-      // describe('array has repeating values', () => {
-      //   it('should return array with no repeating values', () => {
-      //     expect(
-      //       firstTry([4, 'bob', false, null, 4, 'bob'], ['4', null]),
-      //     ).toEqual([4, 'bob', false]);
-      //   });
-      // });
+      describe('array has repeating values', () => {
+        it('should return array with no repeating values', () => {
+          expect(
+            firstTry([4, 'bob', false, null, 4, 'bob'], ['4', null]),
+          ).toEqual([4, 'bob', false]);
+        });
+      });
     });
   });
 }
