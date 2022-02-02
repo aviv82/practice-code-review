@@ -54,9 +54,9 @@ export const sortNumbers3 = (number = []) => {
         break;
       }
     }
-/*     if (i === j) {
+      if (i === j) {
       continue;
-    }  */
+      }
     const temp = copyOfNumber[j];
     for (let k = j - 1; k >= i; k--) {
       copyOfNumber[k + 1] = copyOfNumber[k];
