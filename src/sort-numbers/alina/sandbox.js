@@ -48,18 +48,16 @@ export const sortNumbers2 = (number = []) => {
 export const sortNumbers3 = (number = []) => {
   const copyOfNumber = number.map((x) => x);
   for (const j = 1; j < copyOfNumber.length; j++) {
-    for (const index = 0; index < j; index++) {
-      if (copyOfNumber[j] < copyOfNumber[index]) {
+    for (const i = 0; index < j; i++) {
+      if (copyOfNumber[j] < copyOfNumber[i]) {
         break;
       }
     }
-    /* 
     if (index === j) {
       continue;
-    } */
-
+    } 
     const temp = copyOfNumber[j];
-    for (const k = j - 1; k >= index; k--) {
+    for (const k = j - 1; k >= i; k--) {
       copyOfNumber[k + 1] = copyOfNumber[k];
     }
     copyOfNumber[i] = temp;

@@ -2,7 +2,7 @@ import {
   sortNumbers1,
   sortNumbers2,
   sortNumbers3,
-} from './sort-numbers.spec.js';
+} from './sandbox.js';
 
 for (const sortNumbers of [sortNumbers1, sortNumbers2, sortNumbers3]) {
   describe('sortNumbers sorts an array of numbers', () => {
