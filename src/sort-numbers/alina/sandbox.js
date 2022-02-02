@@ -1,8 +1,8 @@
-/** 
+/**
  * Sort Numbers
  * Write a function that sorts an array of numbers. There's many many strategies
-for sorting numbers, enjoy! 
-*/
+ *  for sorting numbers, enjoy!
+ * */
 
 /**
  * Sorts an array of numbers from smallest to largest to largest.
@@ -11,8 +11,8 @@ for sorting numbers, enjoy!
  *
  * Does not need to support: NaN, Infinity, -Infinity.
  *
- * @param {number[]} [arrayOfNumbers=[]] - the array of numbers to sort
- * @returns {number[]} a new array with the same numbers, but sorted
+ * @param {number[]} [arrayOfNumbers=[]] - the array of numbers to sort.
+ * @returns {number[]} a new array with the same numbers, but sorted.
  * @example
  *
  * sortNumbers([1.5, 1, -1.5, 0, -1]);
