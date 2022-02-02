@@ -8,7 +8,7 @@
  * Sorts an array of numbers from smallest to largest to largest.
  * Returns a new array without modifying the original array.
  * Does not need to support: NaN, Infinity, -Infinity.
- * 
+ *
  * @param {number[]} [arrayOfNumbers=[]] - The array of numbers to sort.
  * @returns {number[]} A new array with the same numbers, but sorted.
  * @example
@@ -48,17 +48,17 @@ export const sortNumbers2 = (number = []) => {
 // 3rd Try: use insert //works
 export const sortNumbers3 = (number = []) => {
   const copyOfNumber = number.map((x) => x);
-  for (const j = 1; j < copyOfNumber.length; j++) {
-    for (const i = 0; i < j; i++) {
+  for (let j = 1; j < copyOfNumber.length; j++) {
+    for (let i = 0; i < j; i++) {
       if (copyOfNumber[j] < copyOfNumber[i]) {
         break;
       }
     }
-    if (index === j) {
+/*     if (i === j) {
       continue;
-    } 
+    }  */
     const temp = copyOfNumber[j];
-    for (const k = j - 1; k >= i; k--) {
+    for (let k = j - 1; k >= i; k--) {
       copyOfNumber[k + 1] = copyOfNumber[k];
     }
     copyOfNumber[i] = temp;
