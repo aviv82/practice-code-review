@@ -44,4 +44,3 @@ export const sortNumbers2 = (number = []) => {
   }
   return copyOfNumber;
 };
-
