@@ -45,13 +45,12 @@ export const sortNumbers2 = (number = []) => {
   return copyOfNumber;
 };
 
-// 2rd Try: use insert. // works
+// 3rd Try: use insert. // works
 export const sortNumbers3 = (number = []) => {
-    const copyOfNumber = number.map(x => x);
-    for (let j = 1; j < copyOfNumber.length; j++) { 
-
-        for(let i=0; i<j; i++) {
-            if (copyOfNumber[j] < copyOfNumber[i]) {                
+  const copyOfNumber = number.map( (x) => x);
+  for (let j = 1; j < copyOfNumber.length; j++) {
+      for(let i=0; i<j; i++) {
+          if (copyOfNumber[j] < copyOfNumber[i]) {                
                 break;
             }
         }
