@@ -49,7 +49,8 @@ export const sortNumbers2 = (number = []) => {
 export const sortNumbers3 = (number = []) => {
   const copyOfNumber = number.map((x) => x);
   for (let j = 1; j < copyOfNumber.length; j++) {
-    for (let i = 0; i < j; i++) {
+    let i = 0;
+    for (i; i < j; i++) {
       if (copyOfNumber[j] < copyOfNumber[i]) {
         break;
       }
