@@ -1,19 +1,19 @@
-import { sortNumbers1, sortNumbers2} from './sandbox.js';
+import { sortNumbers1, sortNumbers2,} from './sandbox.js';
 
 for (const sortNumbers of [sortNumbers1, sortNumbers2]) {
   describe('sortNumbers sorts an array of numbers', () => {
     describe('sorts positive numbers', () => {
-      it('whole numbers', () => {
+      it('a whole numbers', () => {
         const expected = [0, 1, 2, 3, 5];
         const received = sortNumbers([5, 2, 0, 3, 1]);
         expect(received).toEqual(expected);
       });
-      it('decimal numbers', () => {
+      it('with decimal numbers', () => {
         const expected = [0, 1.11, 2.01, 3.8, 5.4];
         const received = sortNumbers([5.4, 2.01, 3.8, 0, 1.11]);
         expect(received).toEqual(expected);
       });
-      it('mixed whole and decimal numbers', () => {
+      it('the mixed whole and decimal numbers', () => {
         const expected = [1, 2, 3.8, 5.4];
         const received = sortNumbers([5.4, 2, 3.8, 1]);
         expect(received).toEqual(expected);
