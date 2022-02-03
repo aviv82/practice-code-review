@@ -23,43 +23,82 @@ strategy:
 */
 
 // 1st Try: inspired by Evan. //works
-export const sortNumbers1 = (number = []) => {
-  const copyOfNumber = number.map((x) => x);
-  return copyOfNumber.sort((firstEl, secondEl) => firstEl - secondEl);
+export const sortNumbers1 = (arrayOfNumbers = []) => {
+  const copy = arrayOfNumbers.map((x) => x);
+  return copy.sort((firstEl, secondEl) => firstEl - secondEl);
 };
 
 // 2nd Try: use pop up. // works
-export const sortNumbers2 = (number = []) => {
-  const copyOfNumber = number.map((x) => x);
-  for (let j = 0; j <= copyOfNumber.length - 2; j++) {
+/* export const sortNumbers2 = (arrayOfNumbers = []) => {
+  const copy = [...arrayOfNumbers];
+  for (let j = 0; j <= copy.length - 2; j++) {
     let indexOfMin = j;
-    for (let i = j + 1; i < copyOfNumber.length; i++) {
-      if (copyOfNumber[indexOfMin] > copyOfNumber[i]) {
+    for (let i = j + 1; i < copy.length; i++) {
+      if (copy[indexOfMin] > copy[i]) {
         indexOfMin = i;
       }
     }
-    const temp = copyOfNumber[j];
-    copyOfNumber[j] = copyOfNumber[indexOfMin];
-    copyOfNumber[indexOfMin] = temp;
+    const temp = copy[j];
+    copy[j] = copy[indexOfMin];
+    copy[indexOfMin] = temp;
   }
-  return copyOfNumber;
+  return copy;
+}; */
+
+export const sortNumbers2 = (arrayOfNumbers = []) => {
+  const copy = [...arrayOfNumbers];
+  for (let j = 0; j <= copy.length - 2; j++) {
+    let indexOfMin = j;
+
+
+/*     for (let i = j + 1; i < copy.length; i++) {
+      if (copy[indexOfMin] > copy[i]) {
+        indexOfMin = i;
+      }
+    } */
+
+
+    const temp = copy[j];
+    copy[j] = copy[indexOfMin];
+    copy[indexOfMin] = temp;
+  }
+  return copy;
 };
 
+
 // 3rd Try: use insert. // works
-export const sortNumbers3 = (number = []) => {
-  const copyOfNumber = number.map((x) => x);
-  for (let j = 1; j < copyOfNumber.length; j++) {
-    let i = 0;
-    for (i; i < j; i++) {
-      if (copyOfNumber[j] < copyOfNumber[i]) {
-        break;
-      }
+export const sortNumbers3 = (arrayOfNumbers = []) => {
+  const copy = [...arrayOfNumbers];
+  // sort the copy
+  for (let j=1; j<copy.length; j++) { 
+    let i;
+    for(i=0; i<j; i++) {
+    // find the one that is larger than copy[j]
+      if (copy[j] < copy[i]) {                
+         break;
+       }
     }
-    const temp = copyOfNumber[j];
-    for (let k = j - 1; k >= i; k--) {
-      copyOfNumber[k + 1] = copyOfNumber[k];
+    if(i===j) {continue;}
+    // insert copy[j]
+    const temp = copy[j];
+    for(let k=j-1; k>=i; k--) { // shift one position to right
+      copy[k+1] = copy[k]
     }
-    copyOfNumber[i] = temp;
+    copy[i]= temp; // insert copy[j]
+    }
+    
+    return copy;
+};
+
+
+//4th Try:inspired by coach Michiel //use indexOf(), Math.min() , splice() //works
+export const sortNumbers4 = (arrayOfNumbers = []) => {
+  const copy = [...arrayOfNumbers];
+  let sortedArr = [];
+  while (copy.length !== 0) {
+    const indexOfMin = copy.indexOf(Math.min(...copy));
+    sortedArr = sortedArr.concat(Math.min(...copy));
+    copy.splice(indexOfMin, 1);
   }
-  return copyOfNumber;
+  return sortedArr;
 };

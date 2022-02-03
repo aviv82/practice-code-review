@@ -1,6 +1,6 @@
-import { sortNumbers1, sortNumbers2, sortNumbers3 } from './sandbox.js';
+import { sortNumbers1, sortNumbers2, sortNumbers3, sortNumbers4 } from './sandbox.js';
 
-for (const sortNumbers of [sortNumbers1, sortNumbers2, sortNumbers3]) {
+for (const sortNumbers of [sortNumbers1, sortNumbers2, sortNumbers3, sortNumbers4]) {
   describe('sortNumbers sorts an array of numbers', () => {
     describe('sorts positive numbers', () => {
       it('a whole numbers', () => {
