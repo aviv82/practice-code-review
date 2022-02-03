@@ -28,7 +28,6 @@ export const sortNumbers1 = (arrayOfNumbers = []) => {
   return copy.sort((firstEl, secondEl) => firstEl - secondEl);
 };
 
-
 // 2nd Try: use pop up. // works
 export const sortNumbers2 = (arrayOfNumbers = []) => {
   const copy = [...arrayOfNumbers];
@@ -45,7 +44,6 @@ export const sortNumbers2 = (arrayOfNumbers = []) => {
   }
   return copy;
 };
-
 
 // 3rd Try: use insert. // works
 export const sortNumbers3 = (arrayOfNumbers = []) => {
@@ -73,7 +71,6 @@ export const sortNumbers3 = (arrayOfNumbers = []) => {
 
   return copy;
 };
-
 
 //4th Try:inspired by coach Michiel //use indexOf(), Math.min() , splice() //works
 export const sortNumbers4 = (arrayOfNumbers = []) => {
