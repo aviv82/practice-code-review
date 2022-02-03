@@ -72,7 +72,7 @@ export const sortNumbers3 = (arrayOfNumbers = []) => {
   return copy;
 };
 
-//4th Try:inspired by coach Michiel //use indexOf(), Math.min() , splice() //works
+// 4th Try:inspired by coach Michiel. // use indexOf(), Math.min() , splice(). // works
 export const sortNumbers4 = (arrayOfNumbers = []) => {
   const copy = [...arrayOfNumbers];
   let sortedArr = [];
