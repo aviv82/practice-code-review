@@ -18,3 +18,13 @@
  * intersection([2, 1, 2], [2, 3]);
  * // -> [2]
  */
+
+const stub = (array = [], values = []) => {
+  const newArray = [];
+  return newArray;
+};
+
+/*
+strategy:
+1. 
+*/
