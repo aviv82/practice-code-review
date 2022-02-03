@@ -58,7 +58,7 @@ export const sortNumbers3 = (arrayOfNumbers = []) => {
       }
     }
     if (i === j) {
-      continue;
+      continue
     }
     // insert copy[j]
     const temp = copy[j];
