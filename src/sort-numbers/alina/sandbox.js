@@ -28,8 +28,9 @@ export const sortNumbers1 = (arrayOfNumbers = []) => {
   return copy.sort((firstEl, secondEl) => firstEl - secondEl);
 };
 
+
 // 2nd Try: use pop up. // works
-/* export const sortNumbers2 = (arrayOfNumbers = []) => {
+export const sortNumbers2 = (arrayOfNumbers = []) => {
   const copy = [...arrayOfNumbers];
   for (let j = 0; j <= copy.length - 2; j++) {
     let indexOfMin = j;
@@ -43,26 +44,6 @@ export const sortNumbers1 = (arrayOfNumbers = []) => {
     copy[indexOfMin] = temp;
   }
   return copy;
-}; */
-
-export const sortNumbers2 = (arrayOfNumbers = []) => {
-  const copy = [...arrayOfNumbers];
-  for (let j = 0; j <= copy.length - 2; j++) {
-    let indexOfMin = j;
-
-
-/*     for (let i = j + 1; i < copy.length; i++) {
-      if (copy[indexOfMin] > copy[i]) {
-        indexOfMin = i;
-      }
-    } */
-
-
-    const temp = copy[j];
-    copy[j] = copy[indexOfMin];
-    copy[indexOfMin] = temp;
-  }
-  return copy;
 };
 
 
@@ -70,24 +51,27 @@ export const sortNumbers2 = (arrayOfNumbers = []) => {
 export const sortNumbers3 = (arrayOfNumbers = []) => {
   const copy = [...arrayOfNumbers];
   // sort the copy
-  for (let j=1; j<copy.length; j++) { 
+  for (let j = 1; j < copy.length; j++) {
     let i;
-    for(i=0; i<j; i++) {
-    // find the one that is larger than copy[j]
-      if (copy[j] < copy[i]) {                
-         break;
-       }
+    for (i = 0; i < j; i++) {
+      // find the one that is larger than copy[j]
+      if (copy[j] < copy[i]) {
+        break;
+      }
     }
-    if(i===j) {continue;}
+    if (i === j) {
+      continue;
+    }
     // insert copy[j]
     const temp = copy[j];
-    for(let k=j-1; k>=i; k--) { // shift one position to right
-      copy[k+1] = copy[k]
+    for (let k = j - 1; k >= i; k--) {
+      // shift one position to right
+      copy[k + 1] = copy[k];
     }
-    copy[i]= temp; // insert copy[j]
-    }
-    
-    return copy;
+    copy[i] = temp; // insert copy[j]
+  }
+
+  return copy;
 };
 
 
