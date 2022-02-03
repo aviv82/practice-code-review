@@ -31,9 +31,9 @@ strategy:
 
 export const firstTry = (array = [], values = []) => {
   const newArray = [];
-  for (const value of values) {
-    if (array.includes(value)) {
-      newArray.push(value);
+  for (const arr of array) {
+    if (values.includes(arr)) {
+      newArray.push(arr);
     }
   }
   return newArray;
