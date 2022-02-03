@@ -28,3 +28,8 @@ const stub = (array = [], values = []) => {
 strategy:
 1. 
 */
+
+export const firstTry = (array = [], values = []) => {
+  const newArray = [];
+  return newArray;
+};
