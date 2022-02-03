@@ -7,6 +7,18 @@ for (const solution of [firstTry]) {
         expect(solution()).toEqual([]);
       });
     });
+    describe('function has no side effects', () => {
+      it('first argument should stay equal to itself', () => {
+        const arrayPar = [5, 6, 7, 8];
+        solution(arrayPar, [7, 8, 9]);
+        expect(arrayPar).toEqual(arrayPar);
+      });
+      it('second argument should stay equal to itself', () => {
+        const valuesPar = [5, 6, 7, 8];
+        solution(['say', 'something'], valuesPar);
+        expect(valuesPar).toEqual(valuesPar);
+      });
+    });
     describe('argument is empty array', () => {
       it('first argument is empty array - should return empty array', () => {
         expect(solution([], ['ew', 'gross'])).toEqual([]);
