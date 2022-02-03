@@ -11,7 +11,8 @@ for (const sortNumbers of [
   sortNumbers3,
   sortNumbers4,
 ]) {
-  describe( sortNumbers.name + 'sortNumbers sorts an array of numbers', () => {
+  // eslint-disable-next-line prefer-template
+  describe(sortNumbers.name + 'sortNumbers sorts an array of numbers', () => {
     describe('sorts positive numbers', () => {
       it('a whole numbers', () => {
         const expected = [0, 1, 2, 3, 5];
