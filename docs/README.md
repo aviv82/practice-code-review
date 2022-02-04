@@ -16,11 +16,15 @@
 
 - deep-flat
 - difference
+  - alina
+    - [solution-difference.js](#srcdifferencealinasolution-differencejs)
 - intersection
 - sort-numbers
+  - alina
   - example-built-in-sort
     - [sort-numbers.js](#srcsort-numbersexample-built-in-sortsort-numbersjs)
 - split-object
+  - alina
 
 ---
 
@@ -36,6 +40,43 @@
 
 # /difference
 
+## /alina
+
+<details><summary><a href="../../src/difference/alina/solution-difference.js" id="srcdifferencealinasolution-differencejs">../src/difference/alina/solution-difference.js</a></summary>
+
+<a name="difference"></a>
+
+## difference ⇒ <code>Array</code>
+
+Creates an array of values that are in the first array, but not not in the second array.
+
+Repeated values are not duplicated in the return value, and the order of result values are determined by the first array.
+
+**Note:** This function returns a new array, and has no side-effects.
+
+**Returns**: <code>Array</code> - Returns the new array of filtered values.
+
+| Param    | Type               | Default         | Description            |
+| -------- | ------------------ | --------------- | ---------------------- |
+| [array]  | <code>Array</code> | <code>[]</code> | The array to inspect.  |
+| [values] | <code>Array</code> | <code>[]</code> | The values to exclude. |
+
+**Example**
+
+```js
+difference([2, 1], [2, 3]); //  [1]
+```
+
+**Example**
+
+```js
+difference([1, 2, 1], [2, 3]); //  [1]
+```
+
+</details>
+
+---
+
 ---
 
 # /intersection
@@ -43,6 +84,10 @@
 ---
 
 # /sort-numbers
+
+## /alina
+
+---
 
 ## /example-built-in-sort
 
@@ -58,8 +103,7 @@ Returns a new array without modifying the original array.
 
 Does not need to support: NaN, Infinity, -Infinity.
 
-**Returns**: <code>Array.&lt;number&gt;</code> - A new array with the same
-numbers, but sorted.
+**Returns**: <code>Array.&lt;number&gt;</code> - A new array with the same numbers, but sorted.
 
 | Param          | Type                              | Default         | Description                   |
 | -------------- | --------------------------------- | --------------- | ----------------------------- |
@@ -86,6 +130,10 @@ sortNumbers([-1, 0, 1]);
 ---
 
 # /split-object
+
+## /alina
+
+---
 
 ---
 
