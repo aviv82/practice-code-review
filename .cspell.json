@@ -1,6 +1,8 @@
 {
   "language": "en",
-  "words": [],
+  "words": [
+    "alina's"
+  ],
   "ignorePaths": [
     "node_modules/**",
     "package.json",

@@ -26,9 +26,15 @@ const stub = (array = [], values = []) => {
 
 /*
 strategy:
-1. 
+1. declare empty array variable for storing intersecting array values
+2. declare empty array variable for storing non-repeating values
+3. create loop to compare values between two arrays
+4. use conditional in loop to construct intersecting array
+5. create loop to compare intersecting array to non-repeating empty array
+6. use conditional in loop to construct non-repeating array   
 */
 
+// following original strategy and inspired by alina's solution to the difference challenge
 export const firstTry = (array = [], values = []) => {
   const newArray = [];
   const finalArray = [];
@@ -43,4 +49,7 @@ export const firstTry = (array = [], values = []) => {
     }
   }
   return finalArray;
-};
+}; // works
+
+// first try passes first round of tests but has no guards set against faulty user input
+// it is also very long and clunky, with too many variables
