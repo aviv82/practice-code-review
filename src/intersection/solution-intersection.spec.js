@@ -1,7 +1,7 @@
 import { firstTry, secondTry } from './aviv/sandbox.js';
 
 for (const solution of [firstTry, secondTry]) {
-  describe('returns new array of intersecting values', () => {
+  describe(`${solution.name}: returns new array of intersecting values`, () => {
     describe('default parameters', () => {
       it('default parameters - should return an empty array', () => {
         expect(solution()).toEqual([]);
