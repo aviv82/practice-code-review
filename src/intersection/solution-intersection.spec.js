@@ -1,6 +1,6 @@
-import { firstTry, secondTry } from './aviv/sandbox.js';
+import { secondTry } from './aviv/sandbox.js';
 
-for (const solution of [firstTry, secondTry]) {
+for (const solution of [secondTry]) {
   describe(`${solution.name}: returns new array of intersecting values`, () => {
     describe('default parameters', () => {
       it('default parameters - should return an empty array', () => {
