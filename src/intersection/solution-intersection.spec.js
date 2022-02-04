@@ -10,12 +10,12 @@ for (const solution of [firstTry, secondTry]) {
     describe('arguments are array', () => {
       it('first argument is not array - should throw type error', () => {
         expect(() => solution('not array', ['oh', 'no!'])).toThrow(
-          new TypeError('first argument is not array'),
+          new TypeError('argument is not an array'),
         );
       });
       it('second argument is not array - should throw type error', () => {
         expect(() => solution(['oh', 'no!'], 'not array')).toThrow(
-          new TypeError('second argument is not array'),
+          new TypeError('argument is not an array'),
         );
       });
     });
