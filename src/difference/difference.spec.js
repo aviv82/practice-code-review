@@ -1,11 +1,6 @@
-import {
-  difference1,
-  difference2,
-  difference3,
-  difference4,
-} from './alina/sandbox.js';
+import { difference } from './alina/solution-difference.js';
 
-for (const solution of [difference1, difference2, difference3, difference4]) {
+for (const solution of [difference]) {
   describe('test difference of two arrays and without duplication and Side-effects', () => {
     describe('default parameters', () => {
       it('argument values is empty:should return []', () => {
