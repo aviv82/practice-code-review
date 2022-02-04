@@ -57,9 +57,15 @@ export const firstTry = (array = [], values = []) => {
 // second attempt; will add guards and try to slim down code
 export const secondTry = (array = [], values = []) => {
   const newArray = [];
-
   if (!Array.isArray(array) || !Array.isArray(values)) {
     throw new TypeError('argument is not an array');
   }
+  const intersect = (s) => {
+    if (values.includes(s)) {
+      newArray.push(s);
+    }
+    return newArray;
+  };
+  array.forEach(intersect);
   return newArray;
 };
