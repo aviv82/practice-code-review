@@ -1,35 +1,35 @@
-# Difference
+# Difference: use Set method
 
-Write a function that removes specific values from an array. The values to
-remove are provided as a second array argument.
+Compares two arrays and returns the values that are not repeating and removes
+doubles
 
----
+## Strategy
 
-## Docstring
+We chose to use the set method because it automatically removes repeating items
+from an array
 
-Here's a starter docstring for your solutions. Feel free to rewrite it if that
-helps you understand:
+## Implementation
+
+- Declaring a new array using `new Set`
+- Created an iterration that filtered only the non repeating values from the
+  values array to the `new Set`
+- We did this using the `filter` method
+
+## Use Cases
+
+- This function could be used to indentify candidates, who applied for the first
+  time
 
 ```js
-/**
- * Creates an array of values that are in the first array, but not not in the second array.
- *
- * Repeated values are not duplicated in the return value, and the order of result values are determined by the first array.
- *
- * **Note:** This function returns a new array, and has no side-effects.
- *
- * @param {Array} [array=[]] - The array to inspect.
- * @param {Array} [values=[]] - The values to exclude.
- * @returns {Array} Returns the new array of filtered values.
- * @example
- *
- * difference([2, 1], [2, 3]); //  [1]
- *
- * @example
- *
- * difference([1, 2, 1], [2, 3]); //  [1]
- */
+const candidateList2020 = ['John', 'Jack', 'Andrea', 'John'];
+const candidateList2021 = ['Bill', 'John', 'Karen', 'Ross'];
+
+const firstTimeCandidates = difference(candidateList2020, candidateList2021);
 ```
 
-> Docstring is adapted from
-> [lodash's difference](https://github.com/lodash/lodash/blob/4.17.15/lodash.js#L6947)
+## Inspiration
+
+<https://www.w3schools.com/js/js_object_sets.asp>
+<https://www.w3schools.com/jsref/jsref_filter.asp>
+
+These article helped me to understand how sets are used
