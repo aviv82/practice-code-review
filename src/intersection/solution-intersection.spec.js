@@ -7,6 +7,18 @@ for (const solution of [firstTry, secondTry]) {
         expect(solution()).toEqual([]);
       });
     });
+    describe('arguments are array', () => {
+      it('first argument is not array - should throw type error', () => {
+        expect(() => solution('not array', ['oh', 'no!'])).toThrow(
+          new TypeError('first argument is not array'),
+        );
+      });
+      it('second argument is not array - should throw type error', () => {
+        expect(() => solution(['oh', 'no!'], 'not array')).toThrow(
+          new TypeError('second argument is not array'),
+        );
+      });
+    });
     describe('function has no side effects', () => {
       it('first argument should stay equal to itself', () => {
         const arrayPar = [5, 6, 7, 8];

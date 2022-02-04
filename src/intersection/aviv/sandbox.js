@@ -51,7 +51,7 @@ export const firstTry = (array = [], values = []) => {
   return finalArray;
 }; // works
 
-// first try passes first round of tests but has no guards set against faulty user input
+// first try passes first round of tests but has no guards set against faulty user input or edge cases
 // it is also very long and clunky, with too many variables
 
 export const secondTry = (array = [], values = []) => {
