@@ -31,10 +31,16 @@ strategy:
 
 export const firstTry = (array = [], values = []) => {
   const newArray = [];
+  const finalArray = [];
   for (const arr of array) {
     if (values.includes(arr)) {
       newArray.push(arr);
     }
+    for (const value of newArray) {
+      if (!finalArray.includes(value)) {
+        finalArray.push(value);
+      }
+    }
   }
-  return newArray;
+  return finalArray;
 };
