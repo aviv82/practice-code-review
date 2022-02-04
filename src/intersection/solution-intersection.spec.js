@@ -71,6 +71,18 @@ for (const solution of [firstTry]) {
           ).toEqual(['91']);
         });
       });
+      describe('first argument has repeating values', () => {
+        it('arguments do not have intersecting values - repeating values should not repeat', () => {
+          expect(solution([5, 8, 5, -9, 'a', 'b', 'a'], [0, 7, 'c'])).toEqual(
+            [],
+          );
+        });
+        it('arguments have intersecting values - repeating values should not repeat', () => {
+          expect(
+            solution([5, 8, 5, -9, 'a', 'b', 'a'], [0, 7, 'c', 'a', 8, 5]),
+          ).toEqual([5, 8, 'a']);
+        });
+      });
     });
   });
 }
