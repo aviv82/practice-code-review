@@ -56,9 +56,10 @@ export const firstTry = (array = [], values = []) => {
 
 // second attempt; will add guards and try to slim down code
 export const secondTry = (array = [], values = []) => {
+  const newArray = [];
+
   if (!Array.isArray(array) || !Array.isArray(values)) {
-    const newArray = [];
-    return newArray;
+    throw new TypeError('argument is not an array');
   }
-  throw new TypeError('argument is not an array');
+  return newArray;
 };
