@@ -61,7 +61,7 @@ export const secondTry = (array = [], values = []) => {
     throw new TypeError('argument is not an array');
   }
   const intersect = (s) => {
-    if (values.includes(s)) {
+    if (values.includes(s) && !newArray.includes(s)) {
       newArray.push(s);
     }
     return newArray;
