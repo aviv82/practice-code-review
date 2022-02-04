@@ -68,4 +68,4 @@ export const secondTry = (array = [], values = []) => {
   };
   array.forEach(intersect);
   return newArray;
-};
+}; // works
