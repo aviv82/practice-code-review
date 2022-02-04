@@ -67,5 +67,6 @@ export const secondTry = (array = [], values = []) => {
     return newArray;
   };
   array.forEach(intersect);
+  console.log(NaN === NaN);
   return newArray;
 }; // works
