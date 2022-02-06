@@ -1,6 +1,6 @@
-import { fifthTry } from './aviv/sandbox.js';
+import { intersection } from './solution-intersection.js';
 
-for (const solution of [fifthTry]) {
+for (const solution of [intersection]) {
   describe(`${solution.name}: returns new array of intersecting values`, () => {
     describe('default parameters', () => {
       it('default parameters - should return an empty array', () => {
