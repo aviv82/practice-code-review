@@ -90,11 +90,40 @@ export const thirdTry = (array = [], values = []) => {
   return newArray;
 }; // works!
 
+// fourth attempt try to optimize code using methods and logical operators inspired by alina
+
+export const fourthTry = (array = [], values = []) => {
+  if (!Array.isArray(array) || !Array.isArray(values)) {
+    throw new TypeError('argument is not an array');
+  } else if (array.includes(NaN)) {
+    throw new TypeError('first argument contains NaN');
+  }
+  const newArray = array.filter((value, i) => {
+    return values.includes(value) && !array.indexOf(value) === i;
+  });
+  return newArray;
+};
+
+// const newArray = array.filter((ele, i) => {
+// return !values.includes(ele) && array.indexOf(ele) === i;
+// });
+
 // ok function works and is complete. time to try and trim it
 
-// fourth attempt refract code using sets set inspired by alina:
+// fifth attempt refract code using sets set inspired by alina:
+export const fifthTry = (array = [], values = []) => {
+  if (!Array.isArray(array) || !Array.isArray(values)) {
+    throw new TypeError('argument is not an array');
+  }
+  if (array.includes(NaN)) {
+    throw new TypeError('first argument contains NaN');
+  }
+  const newArray = new Set();
+};
+
+// sixth attempt; optimized function using set method
 //   return [...new Set(array)].filter((x) => !new Set(values).has(x));
-export const fourthTry = (array = [], values = []) => {
+export const sixthTry = (array = [], values = []) => {
   if (!Array.isArray(array) || !Array.isArray(values)) {
     throw new TypeError('argument is not an array');
   }
