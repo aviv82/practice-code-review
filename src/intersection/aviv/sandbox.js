@@ -98,8 +98,8 @@ export const fourthTry = (array = [], values = []) => {
   } else if (array.includes(NaN)) {
     throw new TypeError('first argument contains NaN');
   }
-  const newArray = array.filter((value) => {
-    return values.includes(value) && !array.includes(value);
+  const newArray = array.filter((value, i) => {
+    return values.includes(value) && array.indexOf(value) === i;
   });
   return newArray;
 };
