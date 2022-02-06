@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 /**
  * Creates an array of values that are in both the first and the second arrays.
  *
@@ -87,4 +88,18 @@ export const thirdTry = (array = [], values = []) => {
   };
   array.forEach(intersect);
   return newArray;
+}; // works!
+
+// ok function works and is complete. time to try and trim it
+
+// fourth attempt refract code using sets set inspired by alina
+export const fourthTry = (array = [], values = []) => {
+  if (!Array.isArray(array) || !Array.isArray(values)) {
+    throw new TypeError('argument is not an array');
+  }
+  if (array.includes(NaN)) {
+    throw new TypeError('first argument contains NaN');
+  }
+  return [...new Set(array)].filter((value) => new Set(values).has(value));
 };
+//   return [...new Set(array)].filter((x) => !new Set(values).has(x));
