@@ -119,11 +119,11 @@ export const fifthTry = (array = [], values = []) => {
     throw new TypeError('first argument contains NaN');
   }
   const arraySet = new Set(array);
-  const ValuesSet = new Set(values);
+  const valuesSet = new Set(values);
   const newArray = new Set(
-    [...arraySet].filter((value) => ValuesSet.has(value)),
+    [...arraySet].filter((value) => valuesSet.has(value)),
   );
-  return newArray;
+  return [...newArray];
 };
 
 // const setNewArray = new Set([...setArray].filter((x) => !setValues.has(x)));
