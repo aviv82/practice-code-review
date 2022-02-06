@@ -120,9 +120,9 @@ export const fifthTry = (array = [], values = []) => {
   }
   const arraySet = new Set(array);
   const ValuesSet = new Set(values);
-  const newArray = new Set([
-    ...arraySet.filter((value) => ValuesSet.has(value)),
-  ]);
+  const newArray = new Set(
+    [...arraySet].filter((value) => ValuesSet.has(value)),
+  );
   return newArray;
 };
 
