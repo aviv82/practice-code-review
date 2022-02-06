@@ -1,7 +1,7 @@
-# Intersection: use Set method
+# Difference: use Set method
 
-Compares two arrays and returns their intersecting values in a new array
-containing no repetitions without altering original arrays
+Compares two arrays and returns the values that are not repeating and removes
+doubles
 
 ## Strategy
 
@@ -10,32 +10,26 @@ from an array
 
 ## Implementation
 
-- Set up guards first to make sure arguments are both arrays. this was done
-  using an`if` conditional and `Array.isArray` method
-- Set up guards that assure arguments do not contain NaNs. This is because NaNs
-  are not equal to each other and therefore will interrupt the function of the
-  intersection comparison. This was done using another `if` conditional
-  and`.includes` method
-- Created a new array which included every iteration of a `new Set` using
-  `[...]` then filtered using `.filter` method only the repeating values from
-  the values array using `.has` method. The new array was then returned
+- Declaring a new array using `new Set`
+- Created an iterration that filtered only the non repeating values from the
+  values array to the `new Set`
+- We did this using the `filter` method
 
 ## Use Cases
 
-- This function could be used to compare data lists or sets for repeating
-  entries, for example, itineraries or inventories
+- This function could be used to indentify candidates, who applied for the first
+  time
 
 ```js
-const acquisitions = ['books', 'desks', 'pens', 'robots', 'fire crackers'];
-const inventory = ['books', 'folders', 'forms', 'pens', 'lasers'];
+const candidateList2020 = ['John', 'Jack', 'Andrea', 'John'];
+const candidateList2021 = ['Bill', 'John', 'Karen', 'Ross'];
 
-const accessItems = intersection(acquisitions, inventory);
+const firstTimeCandidates = difference(candidateList2020, candidateList2021);
 ```
 
 ## Inspiration
 
-- This [page](https://www.w3schools.com/js/js_object_sets.asp) helped us
-  understand how sets are used
+<https://www.w3schools.com/js/js_object_sets.asp>
+<https://www.w3schools.com/jsref/jsref_filter.asp>
 
-- This [thread](https://stackoverflow.com/questions/6976721/is-nan-equal-to-nan)
-  explains how NaN are not equal to each other and why
+These article helped me to understand how sets are used
