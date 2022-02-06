@@ -102,7 +102,7 @@ export const fourthTry = (array = [], values = []) => {
     return values.includes(value) && array.indexOf(value) === i;
   });
   return newArray;
-};
+}; // works
 
 // const newArray = array.filter((ele, i) => {
 // return !values.includes(ele) && array.indexOf(ele) === i;
@@ -118,8 +118,15 @@ export const fifthTry = (array = [], values = []) => {
   if (array.includes(NaN)) {
     throw new TypeError('first argument contains NaN');
   }
-  const newArray = new Set();
+  const arraySet = new Set(array);
+  const ValuesSet = new Set(values);
+  const newArray = new Set([
+    ...arraySet.filter((value) => ValuesSet.has(value)),
+  ]);
+  return newArray;
 };
+
+// const setNewArray = new Set([...setArray].filter((x) => !setValues.has(x)));
 
 // sixth attempt; optimized function using set method
 //   return [...new Set(array)].filter((x) => !new Set(values).has(x));
