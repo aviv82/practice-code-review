@@ -76,7 +76,7 @@ export const thirdTry = (array = [], values = []) => {
   if (!Array.isArray(array) || !Array.isArray(values)) {
     throw new TypeError('argument is not an array');
   } else if (array.includes(NaN)) {
-    throw new TypeError('argument is NaN');
+    throw new TypeError('first argument contains NaN');
   }
   // eslint-disable-next-line sonarjs/no-identical-functions
   const intersect = (s) => {

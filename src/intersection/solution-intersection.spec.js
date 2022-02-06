@@ -20,7 +20,7 @@ for (const solution of [thirdTry]) {
       });
     });
     describe('argument contains NaN value', () => {
-      const errorMessage = 'value is NaN';
+      const errorMessage = 'first argument contains NaN';
       it('first argument contains non-repeating NaN value - should throw type error', () => {
         expect(() =>
           solution(['oh', 'no!', NaN], ['ya', 'yah', 'yes']),
