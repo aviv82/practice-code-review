@@ -1,6 +1,6 @@
-import { secondTry } from './aviv/sandbox.js';
+import { thirdTry } from './aviv/sandbox.js';
 
-for (const solution of [secondTry]) {
+for (const solution of [thirdTry]) {
   describe(`${solution.name}: returns new array of intersecting values`, () => {
     describe('default parameters', () => {
       it('default parameters - should return an empty array', () => {
@@ -17,6 +17,19 @@ for (const solution of [secondTry]) {
         expect(() => solution(['oh', 'no!'], 'not array')).toThrow(
           new TypeError('argument is not an array'),
         );
+      });
+    });
+    describe('argument contains NaN value', () => {
+      const errorMessage = 'value is NaN';
+      it('first argument contains non-repeating NaN value - should throw type error', () => {
+        expect(() =>
+          solution(['oh', 'no!', NaN], ['ya', 'yah', 'yes']),
+        ).toThrow(new TypeError(errorMessage));
+      });
+      it('first argument contains repeating NaN value - should throw type error', () => {
+        expect(() =>
+          solution(['oh', NaN, 'no!', NaN], ['ya', 'yah', 'yes']),
+        ).toThrow(new TypeError(errorMessage));
       });
     });
     describe('function has no side effects', () => {
@@ -71,7 +84,7 @@ for (const solution of [secondTry]) {
         });
         it('other data types arguments have intersecting values - should return intersecting values in new array', () => {
           expect(
-            solution([false, undefined, true], [true, null, false, NaN]),
+            solution([false, undefined, true], [true, null, false]),
           ).toEqual([false, true]);
         });
         it('mixed data types arguments have intersecting values - should return intersecting values in new array', () => {

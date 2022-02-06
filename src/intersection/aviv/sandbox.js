@@ -69,3 +69,22 @@ export const secondTry = (array = [], values = []) => {
   array.forEach(intersect);
   return newArray;
 }; // works
+
+// third attempt; contains guard for edge case - NaN !== NaN
+export const thirdTry = (array = [], values = []) => {
+  const newArray = [];
+  if (!Array.isArray(array) || !Array.isArray(values)) {
+    throw new TypeError('argument is not an array');
+  } else if (array.includes(NaN)) {
+    throw new TypeError('argument is NaN');
+  }
+  // eslint-disable-next-line sonarjs/no-identical-functions
+  const intersect = (s) => {
+    if (values.includes(s) && !newArray.includes(s)) {
+      newArray.push(s);
+    }
+    return newArray;
+  };
+  array.forEach(intersect);
+  return newArray;
+};
