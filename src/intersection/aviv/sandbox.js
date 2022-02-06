@@ -92,7 +92,8 @@ export const thirdTry = (array = [], values = []) => {
 
 // ok function works and is complete. time to try and trim it
 
-// fourth attempt refract code using sets set inspired by alina
+// fourth attempt refract code using sets set inspired by alina:
+//   return [...new Set(array)].filter((x) => !new Set(values).has(x));
 export const fourthTry = (array = [], values = []) => {
   if (!Array.isArray(array) || !Array.isArray(values)) {
     throw new TypeError('argument is not an array');
@@ -101,5 +102,4 @@ export const fourthTry = (array = [], values = []) => {
     throw new TypeError('first argument contains NaN');
   }
   return [...new Set(array)].filter((value) => new Set(values).has(value));
-};
-//   return [...new Set(array)].filter((x) => !new Set(values).has(x));
+}; // works
